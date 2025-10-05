@@ -1,6 +1,5 @@
 package com.example;
 
-import java.util.Scanner;
 public class App {
     /**
      * Returns the nth term of the Fibonacci sequence using recursion.
@@ -29,10 +28,7 @@ public class App {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the position in the Fibonacci sequence: ");
-        int n = sc.nextInt();
-        //int n = 10;
+        int n = 10;
         int nthValue = fib(n);
         System.out.println("The number in position " + n + " of the Fibonacci sequence is " + nthValue + ".");
     }
