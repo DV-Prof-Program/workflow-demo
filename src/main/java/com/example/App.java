@@ -37,7 +37,7 @@ public class App {
         Logger.getLogger("").setLevel(Level.INFO);
         logger.info("Application startup");
 
-        int n = 25;
+        int n = 100;
         logger.info("Computing Fibonacci for n=" + n);
 
         int nthValue = fib(n);
