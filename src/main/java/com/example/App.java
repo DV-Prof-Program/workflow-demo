@@ -1,5 +1,7 @@
 package com.example;
 
+import java.util.logging.*;
+
 public class App {
     /**
      * Returns the nth term of the Fibonacci sequence using recursion.
@@ -15,8 +17,12 @@ public class App {
      * @throws IllegalArgumentException if n &lt;<= 0
      */
     public static int fib(int n) {
+        Logger.getLogger("").setLevel(Level.INFO);
+        logger.info("Running fib(" + n + ")");
+
         if (n <= 0) {
-            throw new IllegalArgumentException("n must be >= 1");
+            logger.info("Error: n must be greater than 0");
+            throw new IllegalArgumentException("n must be > 0");
         }
         if (n == 1) {
             return 0;
@@ -28,8 +34,17 @@ public class App {
     }
 
     public static void main(String[] args) {
-        int n = 10;
+        Logger.getLogger("").setLevel(Level.INFO);
+        logger.info("Application startup");
+
+        int n = 25;
+        logger.info("Computing Fibonacci for n=" + n);
+
         int nthValue = fib(n);
+        logger.info("Fibonacci result=" + nthValue);
+
         System.out.println("The number in position " + n + " of the Fibonacci sequence is " + nthValue + ".");
     }
+
+    private static final Logger logger = Logger.getLogger(App.class.getName());
 }
