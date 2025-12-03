@@ -21,7 +21,7 @@ public class App {
         logger.info("Running fib(" + n + ")");
 
         if (n <= 0) {
-            logger.info("Error: n must be greater than 0");
+            logger.info("n less than or equal to zero Error");
             throw new IllegalArgumentException("n must be > 0");
         }
         if (n == 1) {
