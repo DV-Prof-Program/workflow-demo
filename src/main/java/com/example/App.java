@@ -21,7 +21,7 @@ public class App {
         logger.info("Running fib(" + n + ")");
 
         if (n <= 0) {
-            logger.info("n less than or equal to zero Error");
+            logger.severe("n less than or equal to zero");
             throw new IllegalArgumentException("n must be > 0");
         }
         if (n == 1) {
@@ -38,11 +38,11 @@ public class App {
         logger.info("Application startup");
 
         int n = 10;
+
         logger.info("Computing Fibonacci for n=" + n);
-
         int nthValue = fib(n);
-        logger.info("Fibonacci result=" + nthValue);
 
+        logger.fine("Fibonacci result=" + nthValue);
         System.out.println("The number in position " + n + " of the Fibonacci sequence is " + nthValue + ".");
     }
 
